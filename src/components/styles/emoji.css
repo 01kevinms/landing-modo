@@ -1,0 +1,63 @@
+/* src/styles/emoji.css */
+@keyframes wiggleX {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) translateX(8px) rotate(8deg); /* sobe e vira à direita */
+  }
+  50% {
+    transform: translateY(-12px) translateX(-10px) rotate(-8deg); /* ainda no topo, vira à esquerda */
+  }
+  75% {
+    transform: translateY(-8px) translateX(0) rotate(5deg); /* começa a descer */
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg); /* volta à posição inicial */
+  }
+}
+
+.wiggleX {
+  animation: wiggleX 2s ease-in-out infinite;
+}
+
+@keyframes shwiggle {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+50% {
+    transform: translateY(-6px) rotate(10deg); /* move para a direita e gira */
+  }
+  100% {
+    transform: translateX(0) rotate(0deg); /* volta à posição inicial */
+  }
+}
+
+.shwiggle {
+  animation: shwiggle 2s ease-in-out infinite;
+}
+@keyframes arrowwig {
+  0% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(12px)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+
+.arrowwig {
+  animation: arrowwig 2s ease-in-out infinite;
+}
+@keyframes moneyGlow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+.money-glow {
+  animation: moneyGlow 1.2s ease-in-out infinite;
+}

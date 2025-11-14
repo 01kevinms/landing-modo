@@ -7,6 +7,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import Reveal from './Reveal'
 
 const cards =[
     {id:1 , title:'COLECAO PRIMAVERA', image: modelo1},
@@ -33,7 +34,7 @@ function Cardmodel({ image, title }) {
 
 function Carousel() {
   return (
-    <div className="w-full max-w-5xl mx-auto py-6">
+    <Reveal className="w-full max-w-5xl mx-auto py-6">
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
         spaceBetween={20}
@@ -58,7 +59,7 @@ function Carousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </Reveal>
   )
 }
 export default Carousel

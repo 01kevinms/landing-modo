@@ -8,6 +8,7 @@ import modelo1 from '../assets/model1.png'
 import modelo2 from '../assets/model2.png'
 import modelo3 from '../assets/model3.png'
 import modelo4 from '../assets/model4.png'
+import Reveal from './Reveal'
 
 const cards = [
   { id: 1, title: 'COLEÇÃO PRIMAVERA', image: modelo1 },
@@ -35,7 +36,7 @@ function Card({ image, title }) {
 
 export default function CollectionsCarousel() {
   return (
-    <section className="bg-white py-10">
+    <Reveal className="bg-white py-10">
       <h2 className="text-xl font-semibold px-8 mb-6">COLEÇÕES</h2>
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
@@ -56,6 +57,6 @@ export default function CollectionsCarousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </Reveal>
   )
 }

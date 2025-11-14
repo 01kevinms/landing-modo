@@ -1,8 +1,9 @@
 import model from '../assets/model.png'
+import Reveal from './Reveal'
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[500px] flex items-center justify-start">
+    <Reveal className="relative w-full h-[500px] flex items-center justify-start">
       <img
         src={model}
         alt="model"
@@ -20,6 +21,6 @@ export default function Hero() {
           Explorar agora
         </button>
       </div>
-    </section>
+    </Reveal>
   )
 }

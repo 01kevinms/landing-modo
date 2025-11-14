@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
+import Reveal from './Reveal'
 
 const testimonials = [
   { id: 1, coment: 'Nossas vendas aumentaram muito!', shope: 'Loja Alpha' },
@@ -13,7 +14,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-white py-12">
+    <Reveal className="bg-white py-12">
       <h2 className="text-center text-xl font-semibold mb-6">O QUE DIZEM NOSSOS CLIENTES</h2>
       <Swiper
         modules={[Autoplay, EffectFade]}
@@ -32,6 +33,6 @@ export default function Testimonials() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </Reveal>
   )
 }

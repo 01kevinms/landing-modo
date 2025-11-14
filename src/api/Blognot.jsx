@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Reveal from "../components/Reveal"
 
 function BlogSection() {
   const [posts, setPosts] = useState([])
@@ -49,7 +50,7 @@ function BlogSection() {
   }, [])
 
   return (
-    <section className="bg-white my-6 py-10 px-6">
+    <Reveal className="bg-white my-6 py-10 px-6">
       {/* Cabeçalho do blog */}
       <div className="text-center mb-8">
         {feedImage && (
@@ -103,7 +104,7 @@ function BlogSection() {
           ))}
         </div>
       )}
-    </section>
+    </Reveal>
   )
 }
 

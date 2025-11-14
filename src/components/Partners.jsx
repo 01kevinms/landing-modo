@@ -3,12 +3,14 @@ import sifrao from '../assets/sifrao.png'
 import arrow from '../assets/arrow.png'
 import bottomshop from '../assets/bottomshop.png'
 import tampashop from '../assets/tampashop.png'
-
 import './styles/emoji.css';
+import Reveal from './Reveal'
 
 export default function Partners() {
+
+
   return (
-    <section className="bg-white py-10 text-center">
+    <Reveal className="bg-white py-10 text-center">
       <h2 className="text-xl font-semibold mb-4">ESTATISTICAS</h2>
 <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-4 place-items-center'>
 
@@ -61,6 +63,6 @@ export default function Partners() {
           </div>
         </div>
             </div>
-    </section>
+    </Reveal>
   )
 }

@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 function Vitrine() {
     const produtos = [
         { id: 1, name: 'Produto A', price: 99.99, image: 'https://via.placeholder.com/150' },
@@ -7,7 +9,7 @@ function Vitrine() {
     ];
     return(
         <>
-        <section className="bg-white py-12">
+        <Reveal className="bg-white py-12">
   <h2 className="text-center text-2xl font-semibold mb-6">Produtos em Destaque</h2>
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-8">
     {produtos.map((p) => (
@@ -18,7 +20,7 @@ function Vitrine() {
       </div>
     ))}
   </div>
-</section>
+</Reveal>
 
         </>
     )

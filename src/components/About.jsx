@@ -1,21 +1,21 @@
 import aboutus from '../assets/aboutus.png'
+import Reveal from './Reveal'
 
 export default function About() {
   return (
-    <section className="bg-white py-10 px-6 grid md:grid-cols-2 gap-8 items-center">
+    <Reveal className="bg-white py-10 px-6 grid md:grid-cols-2 gap-8 items-center">
       <img src={aboutus} alt="sobre nós" className="rounded-lg shadow-md" loading="lazy" />
       <div>
-        <h2 className="text-2xl font-semibold mb-4">SOBRE NÓS</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          Somos uma plataforma que conecta marcas e lojistas às tendências globais da moda.
-          Nossa missão é impulsionar o sucesso do seu negócio com qualidade, rapidez e estilo.
+        <h2 className="text-2xl font-semibold mb-4">✨ SOBRE A MODO</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">         
+        Unimos elegância, tecnologia e propósito para redefinir o jeito de vestir — seja para marcas, criadores ou pessoas que amam moda.
         </p>
-        <input
-          type="text"
-          placeholder="Nome da loja"
-          className="bg-gray-200 p-2 rounded w-full md:w-[80%] focus:ring-2 focus:ring-blue-500 outline-none"
-        />
+        <p className="text-gray-700 leading-relaxed mb-4"> Na Modo, acreditamos que a moda é mais do que tendência — é expressão, cultura e inovação.
+        Trabalhamos com marcas e consumidores para oferecer peças que unem estilo, conforto e responsabilidade.</p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+        Atuamos tanto no varejo quanto no mercado corporativo — oferecendo soluções em moda para empresas, influenciadores e consumidores que buscam exclusividade.
+        </p>
       </div>
-    </section>
+    </Reveal>
   )
 }

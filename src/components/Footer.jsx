@@ -2,6 +2,7 @@ import xt from '../assets/x.png'
 import inst from '../assets/inst.png'
 import linke from '../assets/linke.png'
 import padlock from '../assets/padlock.png'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   const language = `
@@ -23,9 +24,9 @@ export default function Footer() {
       </div>
 
       <div>
-        <h3 className="font-semibold mb-2">AJUDA</h3>
-        <p className="text-gray-600">Perguntas frequentes</p>
-        <p className="text-gray-600">Licença</p>
+        <h3 className="font-semibold mb-2 cursor-pointer">AJUDA</h3>
+        <Link className="text-gray-600 cursor-pointer hover:underline" to="/faq">Perguntas frequentes</Link>
+        <p className="text-gray-600 cursor-pointer hover:underline">Licença</p>
       </div>
 
       <div className="flex flex-col items-center md:items-end gap-2">

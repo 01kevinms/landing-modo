@@ -10,7 +10,7 @@
     transform: translateY(-12px) translateX(-10px) rotate(-8deg); /* ainda no topo, vira à esquerda */
   }
   75% {
-    transform: translateY(-8px) translateX(0) rotate(5deg); /* começa a descer */
+    transform: translateY(-8px) translateX(-6px); /* começa a descer */
   }
   100% {
     transform: translateY(0) translateX(0) rotate(0deg); /* volta à posição inicial */

@@ -4,6 +4,7 @@ import 'swiper/css'
 import 'swiper/css/effect-fade'
 import aspas from '../assets/aspas.png'
 import perfil from '../assets/perfil.png'
+import Reveal from './Reveal'
 
 const cards = [
   { id: 1, coment: 'Nossas vendas aumentaram muito!', shope: 'Loja Alpha' },
@@ -23,7 +24,7 @@ const groupCards = (cards, size = 3) => {
 
 function Cardcomments({ coment, shope }) {
   return (
-    <div>
+    <Reveal>
       <div className="flex items-center justify-center gap-2">
         <div className="flex gap-2">
           <img src={aspas} className="h-6" />
@@ -34,7 +35,7 @@ function Cardcomments({ coment, shope }) {
           <p className="text-gray-400">- {shope}</p>
         </div>
       </div>
-    </div>
+    </Reveal>
   )
 }
 

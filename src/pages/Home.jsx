@@ -1,28 +1,28 @@
-import logo from './assets/image.png'
-import Hero from './components/hero.jsx'
-import Partners from './components/partners.jsx'
-import Testimonials from './components/testimonials.jsx'
-import CollectionsCarousel from './components/collectionCarousel.jsx'
-import About from './components/about.jsx'
-import Footer from './components/Footer.jsx'
-import Benefits from './components/Benefits.jsx'
-import Vitrine from './components/Vitrine.jsx'
-import FormContact from './components/FormContact.jsx'
+import logo from '../assets/image.png'
+import Hero from '../components/hero.jsx'
+import Partners from '../components/partners.jsx'
+import Testimonials from '../components/testimonials.jsx'
+import CollectionsCarousel from '../components/collectionCarousel.jsx'
+import About from '../components/about.jsx'
+import Footer from '../components/Footer.jsx'
+import Benefits from '../components/Benefits.jsx'
+import Vitrine from '../components/Vitrine.jsx'
+import FormContact from '../components/FormContact.jsx'
 import { useState } from 'react'
-import BlogSection from './components/Blognot.jsx'
+import BlogSection from '../api/Blognot.jsx'
 
-function App() {
+function Home() {
  const [showForm, setShowForm] = useState(false);
-
   const handleForm = () => setShowForm(true);
   const closeForm = () => setShowForm(false);
 
+   
   return (
-    <div className="bg-[#B4B4B4] min-h-screen overflow-x-hidden">
+    <div  className="bg-[#B4B4B4] min-h-screen overflow-x-hidden">
       <div className="bg-[#E4E4E4] mx-auto shadow-lg">
         {/* HEADER */}
         <header className="bg-white h-20 flex justify-between items-center px-8 shadow-sm">
-      <img className="h-12" src={logo} alt="logo" />
+      <img className="h-12" src={logo}  alt="logo" />
 
       <div>
         <button
@@ -57,7 +57,7 @@ function App() {
   </button>
 </section>
 
-        <Footer />
+        <Footer />      
         </div>
       
       </div>
@@ -65,4 +65,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

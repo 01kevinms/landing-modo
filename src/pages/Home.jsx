@@ -45,7 +45,7 @@ function Home() {
         <Testimonials />
         <Partners />
         <About />        
-        <BlogSection/>
+        <BlogSection/>      
         </div>
 
         <div>

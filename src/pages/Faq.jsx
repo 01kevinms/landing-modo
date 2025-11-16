@@ -2,7 +2,7 @@
 function Faqpage() {
     
 const navigate=()=>{
-    window.location.href="/landing-modo/"
+    window.location.href="/"
 }
     return(
         <div className="min-h-screen bg-gray-100 p-8">

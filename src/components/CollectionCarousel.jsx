@@ -9,6 +9,8 @@ import modelo2 from '../assets/model2.png'
 import modelo3 from '../assets/model3.png'
 import modelo4 from '../assets/model4.png'
 import Reveal from './Reveal'
+import { Link, useNavigate } from 'react-router-dom'
+import { use } from 'react'
 
 const cards = [
   { id: 1, title: 'COLEÇÃO PRIMAVERA', image: modelo1 },
@@ -18,6 +20,10 @@ const cards = [
 ]
 
 function Card({ image, title }) {
+  const navigate= useNavigate();
+  const handleNavigate = () => {
+    navigate('/colecoes');
+  };
   return (
     <div className="bg-[#D9D9D9] rounded-xl p-3 w-[180px] mx-auto transition-transform hover:scale-105">
       <img
@@ -27,7 +33,8 @@ function Card({ image, title }) {
         loading="lazy"
       />
       <h3 className="text-center text-sm font-semibold mb-1">{title}</h3>
-      <button className="bg-[#2675EA] px-3 py-1 rounded text-white text-sm w-full hover:bg-blue-600 transition">
+      <button onClick={handleNavigate}
+      className="bg-[#2675EA] px-3 hover:scale-110 py-1 rounded text-white text-sm w-full hover:bg-blue-600 transition">
         Ver mais
       </button>
     </div>
@@ -40,16 +47,16 @@ export default function CollectionsCarousel() {
       <h2 className="text-xl font-semibold px-8 mb-6">COLEÇÕES</h2>
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
-        spaceBetween={20}
+        spaceBetween={10}
         slidesPerView={3}
         loop={true}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
         breakpoints={{
           320: { slidesPerView: 1 },
           640: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
+        
       >
         {cards.map((c) => (
           <SwiperSlide key={c.id}>

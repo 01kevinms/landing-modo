@@ -1,11 +1,31 @@
 import Reveal from "./Reveal";
 
 function Vitrine() {
-    const produtos = [
-        { id: 1, name: 'Produto A', price: 99.99, image: 'https://via.placeholder.com/150' },
-        { id: 2, name: 'Produto B', price: 149.99, image: 'https://via.placeholder.com/150' },
-        { id: 3, name: 'Produto C', price: 79.99, image: 'https://via.placeholder.com/150' },
-        { id: 4, name: 'Produto D', price: 199.99, image: 'https://via.placeholder.com/150' },
+   const produtos = [
+        { 
+            id: 1, 
+            name: 'Camisa Premium Masculina', 
+            price: 99.99, 
+            image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80' 
+        },
+        { 
+            id: 2, 
+            name: 'Vestido Elegante Feminino', 
+            price: 149.99, 
+            image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80' 
+        },
+        { 
+            id: 3, 
+            name: 'Tênis Casual Unissex', 
+            price: 79.99, 
+            image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80' 
+        },
+        { 
+            id: 4, 
+            name: 'Jaqueta Premium', 
+            price: 199.99, 
+            image: 'https://images.unsplash.com/photo-1641943632479-3798ef1e14c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGphcXVldGElMjBwcmVtaXVufGVufDB8fDB8fHww' 
+        },
     ];
     return(
         <>

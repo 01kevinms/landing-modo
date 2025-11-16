@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import Faqpage from "../pages/Faq";
 import Home from "../pages/Home";
+import Collections from "../pages/colecoes";
 
 function Router(){
     return(
         <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/faq" element={<Faqpage/>}/>            
+            <Route path="/faq" element={<Faqpage/>}/>
+            <Route path="/colecoes" element={<Collections/>}/>              
             <Route path='*' element={<h1>Página não encontrada</h1>} />
         </Routes>
     )

@@ -49,7 +49,7 @@ function Collections() {
 
   {/* HOME BUTTON */}
   <button
-    onClick={()=> navigate("/landing-modo/")}
+    onClick={()=> navigate("/")}
     className="w-max bg-[#4851EF] text-white px-4 py-2 rounded hover:bg-blue-600 transition"
   >
     Home

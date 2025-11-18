@@ -10,12 +10,21 @@ import Vitrine from '../components/Vitrine.jsx'
 import FormContact from '../components/FormContact.jsx'
 import { useState } from 'react'
 import BlogSection from '../api/Blognot.jsx'
+import Selectcount from '../components/Formcount/selectmain.jsx'
+import Countshop from '../components/Formcount/cnpj.jsx'
+import Countpeople from '../components/Formcount/cpf.jsx'
 
 function Home() {
- const [showForm, setShowForm] = useState(false);
-  const handleForm = () => setShowForm(true);
-  const closeForm = () => setShowForm(false);
-
+const [showForm, setShowForm] = useState(false);
+const [openSelect, setOpenSelect] = useState(false);
+const [type, setType] = useState(null);
+const handleForm = () => setShowForm(true);
+const closeForm = () => setShowForm(false);
+const handleSelect=(selectedtype)=>setType(selectedtype)
+const handleCloseAll = ()=>{
+  setOpenSelect(false);
+  setType(null)
+}
    
   return (
     <div  className="bg-[#B4B4B4] min-h-screen overflow-x-hidden">
@@ -52,9 +61,21 @@ function Home() {
 <section className="bg-[#18429b] text-white text-center py-10">
   <h2 className="text-3xl font-bold mb-3">Pronto para transformar sua loja?</h2>
   <p className="mb-5">Cadastre-se agora e descubra o poder da Moda Global.</p>
-  <button className="bg-white text-[#183b9b] px-6 py-2 rounded font-semibold hover:bg-gray-100">
+  <button onClick={()=>setOpenSelect(true)}
+   className="bg-white text-[#183b9b] px-6 py-2 rounded font-semibold hover:bg-gray-100">
     Quero começar
   </button>
+  {openSelect && <Selectcount onClose={()=> setOpenSelect(false)} onSelect={handleSelect}/>}
+  {type ==="cpf" &&(
+     <div className="fixed top-0 left-0 w-full h-full bg-black/40 flex items-center justify-center">
+          <Countpeople onFinish={handleCloseAll} />
+        </div>
+  )}
+  {type ==="cnpj" &&(
+      <div className="fixed top-0 left-0 w-full h-full bg-black/40 flex items-center justify-center">
+          <Countshop onFinish={handleCloseAll} />
+        </div>
+  )}
 </section>
 
         <Footer />      

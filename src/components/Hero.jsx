@@ -1,6 +1,7 @@
 import model from '../assets/model.png'
 import Reveal from './Reveal'
 
+
 export default function Hero() {
   return (
     <Reveal className="relative w-full h-[500px] flex items-center justify-start">
@@ -16,11 +17,8 @@ export default function Hero() {
         </h1>
         <p className="text-lg mb-4">
           Descubra coleções exclusivas que impulsionam suas vendas.
-        </p>
-        <button className="px-6 py-2 bg-[#18219b] rounded-md hover:bg-[#2f56c0] transition text-white font-medium">
-          Explorar agora
-        </button>
-      </div>
+        </p>      
+      </div>        
     </Reveal>
   )
 }

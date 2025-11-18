@@ -46,71 +46,78 @@ function Collections() {
        window.location.href="/"
     }
     return (
-        <div className="pb-12 p-5">
-            
-            <button onClick={navigate} className="w-max bg-[#4851EF] text-white px-4 py-2 rounded hover:bg-blue-600 transition">Home</button>
-            {/*  FILTROS */}
-            <div className="grid grid-cols-2 mt-10 items-start">
+       <div className="pb-12 p-5 max-w-7xl mx-auto">
 
-                <div className="flex flex-col gap-2 items-center">
-                    <h3>Filtrar por Categoria</h3>
-                    <button
-                        className="bg-black text-white hover:scale-110 cursor-pointer rounded-md p-2 transition"
-                        onClick={() => setVisible(!visible)}
-                    >
-                        {visible ? "Esconder Filtros" : "Mostrar Filtros"}
-                    </button>
-                </div>
+  {/* HOME BUTTON */}
+  <button
+    onClick={navigate}
+    className="w-max bg-[#4851EF] text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+  >
+    Home
+  </button>
 
-                {visible && (
-                    <div className="flex flex-wrap gap-2 justify-center transition-all duration-300">
-                        {filters.map((tipo) => (
-                            <button
-                                key={tipo}
-                                onClick={() => setFilter(tipo)}
-                                className={`
-                                    px-3 py-2 rounded-full border transition cursor-pointer
-                                    hover:scale-110
-                                    ${filter === tipo
-                                        ? "bg-gray-800 text-white"
-                                        : "bg-white text-black border-gray-300 hover:bg-gray-200"
-                                    }
-                                `}
-                            >
-                            {formatTitle(tipo).toUpperCase()} ({products[tipo].length})
-                            </button>
-                        ))}
-                    </div>
-                )}
+  {/* FILTROS */}
+  <div className="grid  md:grid-cols-2 mt-10 items-start gap-6">
 
-            </div>
+    {/* TÍTULO + BOTÃO */}
+    <div className="flex flex-col gap-3 items-center md:items-start">
+      <h3 className="text-lg font-semibold">Filtrar por Categoria</h3>
 
-            {/*  ÁREA DOS PRODUTOS */}
-            <div
-                className="transition-opacity duration-500 mt-10"
-                key={filter}
-            >
-                {filter === "todos" ? (
-                    // MOSTRAR TODAS AS CATEGORIAS
-                    filters
-                        .filter((t) => t !== "todos")
-                        .map((t) => (
-                            <ProductsGrid
-                                key={t}
-                                title={formatTitle(t)}
-                                items={products[t]}
-                            />
-                        ))
-                ) : (
-                    // MOSTRAR SOMENTE UMA CATEGORIA
-                    <ProductsGrid
-                        title={formatTitle(filter)}
-                        items={products[filter]}
-                    />
-                )}
-            </div>
+      <button
+        className="bg-black text-white hover:scale-105 cursor-pointer rounded-md px-4 py-2 transition"
+        onClick={() => setVisible(!visible)}
+      >
+        {visible ? "Esconder Filtros" : "Mostrar Filtros"}
+      </button>
+    </div>
 
-        </div>
+    {/* BOTÕES DE FILTRO */}
+    {visible && (
+      <div className="flex flex-wrap gap-3 justify-center md:justify-start transition-all duration-300">
+        {filters.map((tipo) => (
+          <button
+            key={tipo}
+            onClick={() => setFilter(tipo)}
+            className={`
+              px-3 py-2 rounded-full border transition cursor-pointer
+              hover:scale-105 text-sm md:text-base
+              ${
+                filter === tipo
+                  ? "bg-gray-800 text-white"
+                  : "bg-white text-black border-gray-300 hover:bg-gray-200"
+              }
+            `}
+          >
+            {formatTitle(tipo).toUpperCase()} ({products[tipo].length})
+          </button>
+        ))}
+      </div>
+    )}
+
+  </div>
+
+  {/* PRODUTOS */}
+  <div className="transition-opacity duration-500 mt-10" key={filter}>
+    {filter === "todos" ? (
+      filters
+        .filter((t) => t !== "todos")
+        .map((t) => (
+          <ProductsGrid
+            key={t}
+            title={formatTitle(t)}
+            items={products[t]}
+          />
+        ))
+    ) : (
+      <ProductsGrid
+        title={formatTitle(filter)}
+        items={products[filter]}
+      />
+    )}
+  </div>
+
+</div>
+
     )
 }
 

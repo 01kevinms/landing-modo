@@ -34,7 +34,7 @@ function Vitrine() {
   <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-8">
     {produtos.map((p) => (
       <div key={p.id} className="bg-gray-100 p-3 rounded-lg hover:shadow-lg transition">
-        <img src={p.image} alt={p.name} className="rounded-md mb-2" />
+        <img src={p.image} className="rounded-md mb-2 h-70 w-full" />
         <h3 className="font-medium">{p.name}</h3>
         <p className="text-green-600 font-semibold">R$ {p.price}</p>
       </div>

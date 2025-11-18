@@ -43,7 +43,7 @@ function Collections() {
         t.charAt(0).toUpperCase() + t.slice(1)
 
     const navigate = () => {
-       window.location.href="/"
+       window.location.href="/landing-modo"
     }
     return (
        <div className="pb-12 p-5 max-w-7xl mx-auto">

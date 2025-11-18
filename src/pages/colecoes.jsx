@@ -5,6 +5,7 @@ import {
     acessorios, calca, calcados, camiseta, destaque,
     feminino, fitness, masculino, shorts
 } from "../types/Productsgrid"
+import { useNavigate } from "react-router-dom"
 
 function Collections() {
 
@@ -42,15 +43,13 @@ function Collections() {
     const formatTitle = (t) =>
         t.charAt(0).toUpperCase() + t.slice(1)
 
-    const navigate = () => {
-       window.location.href="/landing-modo"
-    }
+    const navigate = useNavigate()
     return (
        <div className="pb-12 p-5 max-w-7xl mx-auto">
 
   {/* HOME BUTTON */}
   <button
-    onClick={navigate}
+    onClick={()=> navigate("/landing-modo")}
     className="w-max bg-[#4851EF] text-white px-4 py-2 rounded hover:bg-blue-600 transition"
   >
     Home
